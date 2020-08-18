@@ -1,0 +1,23 @@
+@import "reset";
+@import "variables";
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 3rem auto 0;
+}
+
+.btn {
+  @extend %display-flex-center;
+
+  padding: 0.5rem;
+  background-color: $dark_blue;
+  color: $white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  background: $blue;
+}

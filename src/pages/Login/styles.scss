@@ -1,0 +1,14 @@
+
+.login-page {
+  $self: &;
+
+  &__form {
+    max-width: 500px;
+    margin: auto;
+
+    #{ $self }__btn {
+      width: 100%;
+      margin-top: 1rem;
+    }
+  }
+}

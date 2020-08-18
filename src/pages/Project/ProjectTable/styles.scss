@@ -1,0 +1,68 @@
+@import "./src/assets/styles/variables";
+
+.project-table {
+  width: 100%;
+  border-spacing: 0 1rem;
+  padding: 0.5rem 1rem;
+
+  &-thead {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    &__field-name {
+      color: lighten($black, 60%);
+      padding-bottom: 0.35rem;
+      cursor: pointer;
+      text-align: left;
+      border-bottom: 0.063rem solid $black;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &-tbody {
+    $tbody: project-table-tbody;
+
+    &__column {
+      position: relative;
+    }
+
+    .status-column {
+      display: flex;
+      align-items: center;
+
+      .#{ $tbody }__circle {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        display: block;
+        margin-right: 0.5rem;
+      }
+    }
+
+    .project-controls {
+      background: $white;
+      position: absolute;
+      padding: 0.25rem 0.5rem;
+      right: 0.75rem;
+      border: 0.063rem solid $light_grey;
+      border-radius: 0.25rem;
+      text-align: center;
+      text-transform: uppercase;
+      z-index: 3;
+
+      &__buttons {
+        padding: 0.25rem 0;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.project-list-empty {
+  @extend %display-flex-center;
+
+  font-size: 1.25rem;
+}

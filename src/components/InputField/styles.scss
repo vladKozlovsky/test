@@ -1,0 +1,45 @@
+@import "./src/assets/styles/variables";
+
+.input-field-label {
+  margin: 0.5rem 0 0.25rem;
+  display: block;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  &__input {
+    @extend %field-border;
+  }
+
+  &__icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: $dark_blue;
+  }
+}
+
+.input-field--right {
+
+  .input-field__input {
+    padding-right: 2rem;
+  }
+
+  .input-field__icon {
+    right: 0.5rem;
+  }
+}
+
+.input-field--left {
+
+  .input-field__input {
+    padding-left: 2rem;
+  }
+
+  .input-field__icon {
+    left: 0.5rem;
+  }
+}

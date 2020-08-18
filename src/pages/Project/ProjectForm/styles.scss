@@ -1,0 +1,63 @@
+@import "./src/assets/styles/variables";
+
+.project-form-container {
+  @extend %display-flex-center;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  z-index: 2;
+  background: lighten($light_black, 75%);
+
+  .project-form {
+    $form: project-form;
+
+    width: 600px;
+    background: $white;
+    margin: auto;
+    padding: 1rem;
+    border: 0.063rem solid $blue;
+    border-radius: 0.25rem;
+
+    &__select-wrapper {
+      display: flex;
+
+      .#{ $form }__selector {
+        margin-top: 0.75rem;
+        margin-right: 1rem;
+
+        @extend %field-border;
+      }
+    }
+
+    &__date-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin: 0.5rem 0;
+    }
+
+    &__header {
+      text-align: center;
+      color: $blue;
+    }
+
+    &__buttons-wrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 1.5rem;
+
+      .#{ $form }__save-btn {
+        color: $blue;
+        border-color: $blue;
+      }
+
+      .#{ $form }__save-as-draft {
+        color: $dark_blue;
+        border-color: $dark_blue;
+      }
+    }
+  }
+}

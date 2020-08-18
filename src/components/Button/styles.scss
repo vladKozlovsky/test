@@ -1,0 +1,31 @@
+@import "./src/assets/styles/variables";
+
+.button {
+  @extend %display-flex-center;
+
+  padding: 0.5rem 1.5rem;
+  border: 0.125rem solid $light-grey;
+  margin: 0 0.25rem;
+  color: $light_black;
+  cursor: pointer;
+
+  &__icon {
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  &:hover {
+    color: $blue;
+    border-color: $blue;
+    background: lighten($light_grey, 11%);
+  }
+
+  &--active {
+    color: $blue;
+    border-color: $blue;
+    background: lighten($light_grey, 11%);
+  }
+}
+

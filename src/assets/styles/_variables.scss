@@ -1,0 +1,22 @@
+
+$dark_blue: #3366FF;
+$red: #d91b60;
+$black: #000;
+$light_black: #383636;
+$blue: #80bfff;
+$white: #fff;
+$green: #95E035;
+$light_grey: #d1d6de;
+$light_pink: #fcbcc8;
+
+%display-flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%field-border {
+  border: 0.063rem solid $dark_blue;
+  border-radius: 0.25rem;
+  padding: 0.5rem 0.25rem;
+}

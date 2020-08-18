@@ -1,0 +1,54 @@
+@import "./src/assets/styles/variables";
+
+.project-page {
+  border: 0.188rem solid $blue;
+  box-shadow: 0 0.375rem 0.625rem inset $light_grey;
+  padding: 1rem 1.5rem 1.5rem;
+  background: lighten($light_grey, 13%);
+
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 2rem;
+    padding-bottom: 1.5rem;
+
+    .search-container {
+      display: flex;
+
+      input {
+        height: 100%;
+        background: lighten($light_grey, 13%);
+      }
+
+      &__btn {
+        margin-left: 1rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .controls {
+      display: flex;
+    }
+  }
+
+  &-main {
+    $main: project-page-main;
+
+    background: $white;
+    padding: 0.25rem;
+    color: $light-black;
+
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      padding-bottom: 1rem;
+
+      .#{ $main }__create-project-btn {
+        color: white;
+        background: $dark_blue;
+        text-transform: uppercase;
+        border-color: $blue;
+      }
+    }
+  }
+}
